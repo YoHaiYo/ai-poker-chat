@@ -21,6 +21,16 @@ export default function PokerGame() {
     gamePhase: "preflop",
   });
 
+  const addChatMessage = (sender, message) => {
+    const newMsg = {
+      id: Date.now(),
+      sender,
+      message,
+      timestamp: new Date(),
+    };
+    setChatMessages((prev) => [...prev, newMsg]);
+  };
+
   // 컴포넌트 마운트 시 초기 메시지 추가
   useEffect(() => {
     addChatMessage("ai", "Hello! Ready to start a poker game?");
@@ -33,16 +43,6 @@ export default function PokerGame() {
     },
     onChatMessage: addChatMessage,
   });
-
-  const addChatMessage = (sender, message) => {
-    const newMsg = {
-      id: Date.now(),
-      sender,
-      message,
-      timestamp: new Date(),
-    };
-    setChatMessages((prev) => [...prev, newMsg]);
-  };
 
   const handleSendMessage = () => {
     if (!newMessage.trim()) return;
