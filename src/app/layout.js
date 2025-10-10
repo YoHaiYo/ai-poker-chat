@@ -25,16 +25,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="">
-        <Navbar />
-        <main className="mx-auto">{children}</main>
+        {/* <Navbar /> */}
+        <main className="">{children}</main>
 
-        {/* 토스트 메시지 (기본 숨김) */}
-        <div
-          id="toast-message"
-          className="z-10 fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm shadow-md hidden"
-        ></div>
-
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
