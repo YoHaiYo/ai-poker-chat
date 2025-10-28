@@ -9,7 +9,7 @@ export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleStartGame = () => {
-    // 포커게임 페이지로 이동
+    // 포커게임 페이지로 이동.
     window.location.href = "/poker";
   };
 
